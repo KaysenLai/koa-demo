@@ -9,7 +9,7 @@ describe("Restful demo application test", () => {
   it("get should response 404 correctly", async () => {
     await supertest(app.callback())
       .get("/user/60323aaa5c1b804588bf086f")
-      .expect(200);
+      .expect(404);
   });
 
   it("post should response 201 correctly", async () => {
